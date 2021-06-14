@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Worker Centers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Worker</th>
+      <th>Medical center</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @worker_centers.each do |worker_center| %>
+      <tr>
+        <td><%= worker_center.worker_id %></td>
+        <td><%= worker_center.medical_center_id %></td>
+        <td><%= link_to 'Show', worker_center %></td>
+        <td><%= link_to 'Edit', edit_worker_center_path(worker_center) %></td>
+        <td><%= link_to 'Destroy', worker_center, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Worker Center', new_worker_center_path %>

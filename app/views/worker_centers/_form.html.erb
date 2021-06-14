@@ -1,0 +1,27 @@
+<%= form_with(model: worker_center) do |form| %>
+  <% if worker_center.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker_center.errors.count, "error") %> prohibited this worker_center from being saved:</h2>
+
+      <ul>
+        <% worker_center.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :worker_id %>
+    <%= form.text_field :worker_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medical_center_id %>
+    <%= form.text_field :medical_center_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

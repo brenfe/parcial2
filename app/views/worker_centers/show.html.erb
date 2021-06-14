@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Worker:</strong>
+  <%= @worker_center.worker_id %>
+</p>
+
+<p>
+  <strong>Medical center:</strong>
+  <%= @worker_center.medical_center_id %>
+</p>
+
+<%= link_to 'Edit', edit_worker_center_path(@worker_center) %> |
+<%= link_to 'Back', worker_centers_path %>

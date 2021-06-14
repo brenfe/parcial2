@@ -1,0 +1,2 @@
+module WorkerCentersHelper
+end
